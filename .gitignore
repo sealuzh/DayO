@@ -18,3 +18,39 @@ cabal.sandbox.config
 .stack-work/
 cabal.project.local
 .HTF/
+
+### Exclude compiled files and node modules ###
+frontend/node_modules/
+testdb.mv.db
+testdb.trace.db
+target
+frontend/e2e/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Excluding the embedded database ###
+backend/src/main/resources/static/
+backend/src/main/resources/templates/
+backend/testdbtesttest.mv.db
+backend/testdbtesttest.trace.db
