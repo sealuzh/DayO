@@ -1,6 +1,6 @@
-##DayO prototype v.1.0.0-SNAPSHOT 23/08/2017
+## DayO prototype v.1.0.0-SNAPSHOT 23/08/2017
 
-###Components
+### Components
 Application consists of two modules:  
 * backend written in Kotlin and Java, using Spring Boot v.1.5.3.RELEASE  
 * frontend written in TypeScript, using Angular v.4.0.0  
@@ -8,12 +8,12 @@ Application consists of two modules:
 Backend module has a dependency on frontend module, after building the project both modules are packaged in one .jar file  
 Dependencies are managed with Maven, each of the modules has its own .pom file, parent .pom file is stored in root directory of the project.
 
-###Building the Application
+### Building the Application
 To build the application:    
 * run: `mvnw clean install` on Windows or `./mvnw clean install` on macOS/Linux
 * .jar file is stored in /backend/target/ 
 
-###Authorizing Application with Google
+### Authorizing Application with Google
 Authorization of the application to use Google Calendar Services:
 1. To get credentials create new project on [Google Developer Console](https://console.developers.google.com/flows/enableapi?apiid=calendar)
 2. In the created project setup the redirect URI to: http://localhost:8080/googleAuthCallback
@@ -21,7 +21,7 @@ Authorization of the application to use Google Calendar Services:
    inserting your credentials (client_id and client_secret) into BasicAuthentication(...)
    and client_id as parameter of `AuthorizationCodeFlow.Builder` --> clientId
 
-###Running the Application Locally 
+### Running the Application Locally 
 * Install latest npm
 * Install latest Angular CLI
 * navigate to /backend/target/ from command line  
@@ -43,7 +43,7 @@ Normal flow after navigating to [localhost:4200](http://localhost:4200/) is:
 * authorization of the user with Google account (using email setup for the user in the DB)
 * interaction with application
 
-###Adding new Users
+### Adding new Users
 To add new users extend users list in `ConfigurationConstants.kt` file with new `UserDefinition(login, password, email)`  
 Next time server is restarted new users will be added to the database automatically.  
 
