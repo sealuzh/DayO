@@ -49,7 +49,7 @@ Next time server is restarted new users will be added to the database automatica
 
 Users are authenticated with their name, so all login values (user names) values must be unique!
 
-###Deploying the Application
+### Deploying the Application
 To deploy the application:
 1. Change the SERVER_URL and CLIENT_URL constants in ConfigurationConstants.kt file in backend module
    (will be the same, if both modules are deployed on the same server)
