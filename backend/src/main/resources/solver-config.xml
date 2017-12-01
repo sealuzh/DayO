@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<solver>
+    <!-- Define model -->
+    <solutionClass>ch.uzh.ifi.seal.domain_classes.Schedule</solutionClass>
+    <entityClass>ch.uzh.ifi.seal.domain_classes.Task</entityClass>
+    <environmentMode>FAST_ASSERT</environmentMode>
+
+    <!-- Define score function -->
+    <scoreDirectorFactory>
+        <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
+        <easyScoreCalculatorClass>ch.uzh.ifi.seal.business_logic.DayAssignmentScoreCalculator</easyScoreCalculatorClass>
+    </scoreDirectorFactory>
+
+    <!-- limit for termination of the csp solving -->
+    <termination>
+        <secondsSpentLimit>30</secondsSpentLimit>
+    </termination>
+
+    <!-- Configuration for optimization algorithms (optional) -->
+    <constructionHeuristic>
+        <constructionHeuristicType>FIRST_FIT</constructionHeuristicType>
+    </constructionHeuristic>
+    <localSearch>
+        <acceptor>
+            <lateAcceptanceSize>400</lateAcceptanceSize>
+        </acceptor>
+        <forager>
+            <acceptedCountLimit>1</acceptedCountLimit>
+        </forager>
+    </localSearch>
+</solver>

@@ -1,0 +1,18 @@
+<nav class="navbar navbar-toggleable-xl navbar-light bg-faded">
+  <div class="container">
+    <h1 class="navbar-brand mb-0" href="#">DayO</h1>
+    <div class="navbar-collapse collapse">
+      <a class="nav-item nav-link" [routerLink]="['/']" [routerLinkActive]="['active']">Dashboard<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" [routerLink]="['/settings']" [routerLinkActive]="['active']">Adjust Settings</a>
+    </div>
+    <span class="navbar-text pull-right" style="white-space: nowrap">
+      Logged in as {{user.name}}
+    </span>
+  </div>
+
+</nav>
+  <div class="container" style="padding-top: 2em">
+    <router-outlet>
+      <!-- here comes the content of the application-->
+    </router-outlet>
+  </div>
